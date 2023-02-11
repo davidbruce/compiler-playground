@@ -148,7 +148,6 @@ class Scanner {
         while (isAlphaNumeric(peek())) advance();
 
         String text = source.substring(start, current);
-        //if the type does not match a keyword it is an identifier
         TokenType type = keywords.get(text);
         //if the type does not match a keyword it is an identifier
         if (type == null) type = IDENTIFIER;
